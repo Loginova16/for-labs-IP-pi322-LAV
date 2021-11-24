@@ -1,8 +1,10 @@
-<ul>
-Вставь ссылку в поисковик для перехода на главную страиницу сайта
-<li>http://f0597837.xsph.ru</li>
-<?php
 
+  <div id="bubble">
+    <p><a href="http://f0597837.xsph.ru">Click for OVN Homepage!</a></p>
+  </div>
+
+<?php
+echo "<br>";
  $var1= '3';
  $var2 = 5;
  echo $var1 . ' - ' . gettype($var1) . '<br>';
