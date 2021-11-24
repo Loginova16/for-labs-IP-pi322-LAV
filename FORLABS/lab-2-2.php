@@ -1,6 +1,7 @@
-<ul>
-Вставь ссылку в поисковик для перехода на главную страиницу сайта
-<li>http://f0597837.xsph.ru</li>
+<div id="bubble">
+  <p><a href="http://f0597837.xsph.ru">Click for OVN Homepage!</a></p>
+</div>
+
 <p> Наибольшее число:
 <p>
 <?php
