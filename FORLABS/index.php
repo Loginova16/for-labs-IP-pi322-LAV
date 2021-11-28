@@ -44,7 +44,24 @@
 <div id="bubble">
   <p><a href="http://f0597837.xsph.ru/lab-2-11.php">Click for OVN page 2.11!</a></p>
 </div>
-
+<div id="bubble">
+  <p><a href="http://f0597837.xsph.ru/lab2-1.php">Click for OVN page 2.11!</a></p>
+</div>
+<div id="bubble">
+  <p><a href="http://f0597837.xsph.ru/lab2-2.php">Click for OVN page 2.11!</a></p>
+</div>
+<div id="bubble">
+  <p><a href="http://f0597837.xsph.ru/lab2-3.php">Click for OVN page 2.11!</a></p>
+</div>
+<div id="bubble">
+  <p><a href="http://f0597837.xsph.ru/lab2-4.php">Click for OVN page 2.11!</a></p>
+</div>
+<div id="bubble">
+  <p><a href="http://f0597837.xsph.ru/lab2-5.php">Click for OVN page 2.11!</a></p>
+</div>
+<div id="bubble">
+  <p><a href="http://f0597837.xsph.ru/lab2-6.php">Click for OVN page 2.11!</a></p>
+</div>
 <p> Дата и время:
 <p>
 <?php
