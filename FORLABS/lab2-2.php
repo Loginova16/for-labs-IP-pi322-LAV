@@ -1,5 +1,5 @@
 <div id="bubble">
-  <p><a href="http://f0597837.xsph.ru">Click for OVN Homepage!</a></p>
+  <p><a href="http://f0603071.xsph.ru">Click for OVN Homepage!</a></p>
 </div>
 
   <?php

@@ -1,9 +1,6 @@
 <div id="bubble">
-    <p><a href="http://f0597837.xsph.ru"> Домой </a></p>
-  </div>
-  <h1 align="center"> Лабораторная работа №2 </h1>
-  <h1 align="center"> Самотоятельная работа №1. </h1>
-  <h2 align="center"> Вариант 14 </h2>
+  <p><a href="http://f0603071.xsph.ru">Click for OVN Homepage!</a></p>
+</div>
 <?php
 
 $massive = array();
@@ -46,9 +43,3 @@ echo "<th>","$massive[$i]","</th>","   ";
 }
 echo "</table>";
 ?>
-<div id="bubble">
-    <p><a href="http://f0597837.xsph.ru/lab2-5.php"> 	&raquo; Самотоятельная работа №2 </a></p>
-  </div>
-  <div id="bubble">
-      <p><a href="http://f0597837.xsph.ru/lab2-3.php"> &laquo; Задание 3 </a></p>
-    </div>
