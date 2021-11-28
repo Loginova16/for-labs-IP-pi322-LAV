@@ -22,7 +22,7 @@
          return pow(pow(cos($u),2)+pow(sin(pow($t,3)),4),1/4);}
 
 
-   echo "<img src='forlab2.png'>";
+   echo "<img src='Уравнение.png'>";
  $A=rand(-10,10);
  $B=rand(-10,10);
 
