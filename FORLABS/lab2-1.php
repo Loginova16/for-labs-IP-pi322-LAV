@@ -39,4 +39,3 @@
     $rez1 = array_unique($rez);
 print_r($rez1);
    ?>
-  
