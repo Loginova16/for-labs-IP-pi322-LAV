@@ -1,7 +1,9 @@
 <div id="bubble">
   <p><a href="http://f0603071.xsph.ru">Click for OVN Homepage!</a></p>
 </div>
-
+<head>
+	<title>Логинова ПИ-322</title>
+  </head>
     <?php
     $treug=array(1,2,3,4,5,6,7,8,9,10);
     $kvd=array(1,2,3,4,5,6,7,8,9,10);

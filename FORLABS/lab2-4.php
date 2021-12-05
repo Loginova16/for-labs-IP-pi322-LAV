@@ -1,6 +1,9 @@
 <div id="bubble">
   <p><a href="http://f0603071.xsph.ru">Click for OVN Homepage!</a></p>
 </div>
+<head>
+	<title>Логинова ПИ-322</title>
+  </head>
 <?php
 
 $massive = array();
