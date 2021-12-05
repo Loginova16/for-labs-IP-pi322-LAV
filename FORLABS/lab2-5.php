@@ -7,12 +7,27 @@
   <?php
 
   function f($u, $t) {
-      if ( $u>2)
-          return pow($u^2+$t,1/3)*pow(sin($t),2);
-      elseif ( $u <= 2)
-          return log(abs($u^2/($u+$t)));
+    if ( $u>2)
+        return pow($u^2+$t,1/3)*pow(sin($t),2);
+    elseif ( $u <= 2)
+        return log(abs($u^2/($u+$t)));
 
-  }
+}
+
+
+  echo "<img src='Уравнение1.png'>";
+$A=rand(-10,10);
+$B=rand(-10,10);
+
+echo "<br>","A = $A;","<br>","B = $B","<br>";
+
+$result=sin(f($B,$A))+sqrt(abs(f($A,$B)));
+echo "Результат = ","$result";
+echo "<br>";
+  ?>
+  <?php
+
+
 
   function f2($u, $t) {
      if ( $u < -2 )
@@ -29,7 +44,7 @@
  $A=rand(-10,10);
  $B=rand(-10,10);
 
- echo "<br>","a = $A;","<br>","b = $B","<br>";
+ echo "<br>","A = $A;","<br>","B = $B","<br>";
 
  $result=log(abs(f2($A,$B)))+f(pow($A,2),$A+$B);
  echo "Результат = ","$result";
