@@ -4,8 +4,30 @@
 <head>
 	<title>Логинова ПИ-322</title>
   </head>
-<?php
+  <?php
+  echo "Вариант 11";
+$array = array();
+$sum=0;
+echo "<br>","Иходный массив: ","<br>";
 
+for ($i=0; $i<=9;$i++){
+
+$array[$i]=rand(-10,10);
+
+echo "<th>","$array[$i]","</th>","   ";
+}
+
+echo "</table>";
+
+for ($i=9;$i>=1;$i--) {
+if($array[$i]<pow($i,2))
+  $sum+=$array[$i];
+}
+echo "<br>","<br>","Сумма удовлетворяющая условию :  ","$sum","<br>";
+echo "<br>";
+  ?>
+<?php
+  echo "Вариант 14";
 $massive = array();
    $c1=rand(0,9);
    $c2=rand(0,9);
