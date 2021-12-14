@@ -7,6 +7,7 @@
 	<title>Логинова А.В.</title>
 <body bgcolor="#F08080">
 </head>
+<body>
   <FORM method="post" action="s3-5p.php">
  Введите своё имя:  <INPUT type="text" name="yourname" size="5">
   	<br>
