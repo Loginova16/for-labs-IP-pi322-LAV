@@ -1,4 +1,5 @@
 
+<body bgcolor="#F08080">
 <div id="bubble">
   <p><a href="http://f0603071.xsph.ru/lab-1-1.php">Click for OVN page 1.1!</a></p>
 </div>

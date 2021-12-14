@@ -1,7 +1,7 @@
 <div id="bubble">
   <p><a href="http://f0603071.xsph.ru">Click for OVN Homepage!</a></p>
 </div>
-
+<body bgcolor="#F08080">
 <p> Арифметические операции:
 <p>
 <?php

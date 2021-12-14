@@ -1,6 +1,6 @@
 <div id="bubble">
   <p><a href="http://f0603071.xsph.ru">Click for OVN Homepage!</a></p>
-</div>
+</div><body bgcolor="#F08080">
 <?php
 $а = "А";
 switch ($а) {
