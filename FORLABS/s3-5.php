@@ -8,6 +8,7 @@
 <body bgcolor="#F08080">
 </head>
 <body>
+   <h1>Задание №3.5</h1>
   <FORM method="post" action="s3-5p.php">
  Введите своё имя:  <INPUT type="text" name="yourname" size="5">
   	<br>
