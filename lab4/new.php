@@ -1,7 +1,7 @@
 <html>
 <head> <title> Добавление нового языка </title> </head>
 <body>
-<body bgcolor="#FFE4E1">
+<body bgcolor="#F08080">
 <H2>Добавление языка:</H2>
 <form action="save_new.php" metod="get">
 Название: <input name="name" size="20" type="text">

@@ -1,3 +1,4 @@
+<body bgcolor="#F08080">
 <?
 
 require_once('connect.php');

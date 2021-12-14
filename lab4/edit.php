@@ -1,7 +1,7 @@
 <html>
 <head>
 <title> Редактирование  </title>
-<body bgcolor="#FFE4E1">
+<body bgcolor="#F08080">
 </head>
 <body>
 <?php
