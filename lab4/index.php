@@ -1,34 +1,123 @@
+<?
+require_once('connect.php');
+?>
+<div id="bubble">
+  <p><a href="http://f0603071.xsph.ru">Click for OVN Homepage!</a></p>
+</div><body bgcolor="#F08080">
+<head>
+	<title>Логинова ПИ-322</title>
+  </head>
 <html>
-<head> <title> Сведения о прользователях сайта </title> </head>
-<body>
+<head> <title> Сведения о языках </title> </head>
+
+<body bgcolor="#FFE4E1">
+   <style>
+   h1 {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+   }
+  </style>
+
+<h1 style="color:#800080">Языки программирования</h1>
+<table border="2">
+    <style>
+   table {
+    width: 50%;
+    border-collapse: collapse;
+   }
+   td, th {
+    padding: 4px;
+    border: 1px solid #000080;
+   }
+   th {
+    background: #C71585;
+    color: #ffe;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+   }
+  </style>
+
+<tr>
+ <th> ID </th> <th> Название </th> <th> Тип </th> <th> Год разработки </th> <th> Тип выполнения </th> <th> Автор </th>
+ <th> Редактирование </th> <th> Удаление </th> </tr>
 <?php
- mysql_connect("localhost", "root") or die ("Невозможно
-подключиться к серверу"); // установление соединения с сервером
- mysql_query('SET NAMES cp1251'); // тип кодировки
- // подключение к базе данных:
- mysql_select_db("users") or die("Нет такой таблицы!");
-?>
-</body> </html>
-<h2>Зарегистрированные пользователи:</h2>
-<table border="1">
-<tr> // вывод «шапки» таблицы
- <th> Имя </th> <th> E-mail </th>
- <th> Редактировать </th> <th> Уничтожить </th> </tr>
-<?php
-$result=mysql_query("SELECT id_user, user_name, user_e_mail
-FROM user"); // запрос на выборку сведений о пользователях
-while ($row=mysql_fetch_array($result)){// для каждой строки из запроса
- echo "<tr>";
- echo "<td>" . $row['user_name'] . "</td>";
- echo "<td>" . $row['user_e_mail'] . "</td>";
- echo "<td><a href='edit.php?id=" . $row['id']
-. "'>Редактировать</a></td>"; // запуск скрипта для редактирования
- echo "<td><a href='delete.php?id=" . $row['id']
-. "'>Удалить</a></td>"; // запуск скрипта для удаления записи
- echo "</tr>";
-}
+$res = mysqli_query($connection, "SELECT * FROM `lang`");
+$res = mysqli_fetch_all($res);
+  foreach ($res as $res) {
+                ?>
+                    <tr>
+                        <td><?= $res[0] ?></td>
+                        <td><?= $res[1] ?></td>
+                        <td><?= $res[2] ?></td>
+                        <td><?= $res[3] ?></td>
+                        <td><?= $res[4] ?></td>
+                        <td><?= $res[5] ?></td>
+                        <td><a href="edit.php?id=<?= $res[0] ?>">Изменить</a></td>
+                        <td><a href="delete.php?id=<?= $res[0] ?>">Уничтожить</a></td>
+                    </tr>
+                <?php
+            }
+        ?>
+        <?
 print "</table>";
-$num_rows = mysql_num_rows($result); // число записей в таблице БД
-print("<P>Всего пользователей: $num_rows </p>");
 ?>
-<p> <a href="new.html"> Добавить пользователя </a>
+
+<p> <a href="new.php"> Добавить новый язык </a>
+
+<h1 style="color:#800080">Разработчики</h1>
+<table border="2">
+<tr>
+ <th> ID </th> <th> Имя разработчика </th> <th> Город разработки </th>  <th> Редактирование </th> <th> Удаление </th> </tr>
+<?php
+$res = mysqli_query($connection, "SELECT * FROM `razrab`");
+$res = mysqli_fetch_all($res);
+  foreach ($res as $res) {
+                ?>
+                    <tr>
+                        <td><?= $res[0] ?></td>
+                        <td><?= $res[1] ?></td>
+                        <td><?= $res[2] ?></td>
+                        <td><a href="edit_raz.php?id=<?= $res[0] ?>">Изменить</a></td>
+                        <td><a href="del_raz.php?id=<?= $res[0] ?>">Уничтожить</a></td>
+                    </tr>
+                <?php
+            }
+        ?>
+        <?
+print "</table>";
+?>
+<p> <a href="new_raz.php"> Добавить нового разработчика </a>
+<br>
+<h1 style="color:#800080">Приложения</h1>
+<table border="2">
+<tr>
+ <th> ID </th> <th> ID языка </th> <th> ID разработчика </th><th> Дата разработки </th>
+   <th> Версия </th> <th> Название </th>  <th>Редактирование </th> <th> Удаление </th> </tr>
+<?php
+$res = mysqli_query($connection, "SELECT * FROM `application`");
+$res = mysqli_fetch_all($res);
+  foreach ($res as $res) {
+                ?>
+                    <tr>
+                        <td><?= $res[0] ?></td>
+                        <td><?= $res[1] ?></td>
+                        <td><?= $res[2] ?></td>
+                        <td><?= $res[3] ?></td>
+                        <td><?= $res[4] ?></td>
+                        <td><?= $res[5] ?></td>
+                        <td><a href="edit_app.php?id=<?= $res[0] ?>">Изменить</a></td>
+                        <td><a href="del_app.php?id=<?= $res[0] ?>">Уничтожить</a></td>
+                    </tr>
+                <?php
+            }
+        ?>
+        <?
+print "</table>";
+?>
+<p> <a href="new_app.php"> Добавить новое приложение </a>
+<br><br>
+<p> <a href="gen_pdf.php"> Скачать PDF </a>
+<br><br>
+<p> <a href="gen_excel.php"> Скачать Excel </a>
+<br><br>
+</body> </html>
