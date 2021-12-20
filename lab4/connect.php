@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$database = "users";
+$database = "language";
 $username = "root";
-$password = "";
+$password = "root";
 $connection = mysqli_connect($servername, $username, $password, $database);
 if (!$connection) {
     die("Connection failed: " . mysqli_connect_error());
