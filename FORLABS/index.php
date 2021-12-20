@@ -1,4 +1,3 @@
-
 <body bgcolor="#F08080">
 <div id="bubble">
   <p><a href="http://f0603071.xsph.ru/lab-1-1.php">Click for OVN page 1.1!</a></p>
@@ -46,40 +45,40 @@
   <p><a href="http://f0603071.xsph.ru/lab-2-11.php">Click for OVN page 2.11!</a></p>
 </div>
 <div id="bubble">
-  <p><a href="http://f0603071.xsph.ru/lab2-1.php">Click for OVN page 2.11!</a></p>
+  <p><a href="http://f0603071.xsph.ru/lab2-1.php">Click for OVN page 2.12!</a></p>
 </div>
 <div id="bubble">
-  <p><a href="http://f0603071.xsph.ru/lab2-2.php">Click for OVN page 2.11!</a></p>
+  <p><a href="http://f0603071.xsph.ru/lab2-2.php">Click for OVN page 2.13!</a></p>
 </div>
 <div id="bubble">
-  <p><a href="http://f0603071.xsph.ru/lab2-3.php">Click for OVN page 2.11!</a></p>
+  <p><a href="http://f0603071.xsph.ru/lab2-3.php">Click for OVN page 2.14!</a></p>
 </div>
 <div id="bubble">
-  <p><a href="http://f0603071.xsph.ru/lab2-4.php">Click for OVN page 2.11!</a></p>
+  <p><a href="http://f0603071.xsph.ru/lab2-4.php">Click for OVN page 2.15!</a></p>
 </div>
 <div id="bubble">
-  <p><a href="http://f0603071.xsph.ru/lab2-5.php">Click for OVN page 2.11!</a></p>
+  <p><a href="http://f0603071.xsph.ru/lab2-5.php">Click for OVN page 2.16!</a></p>
 </div>
 <div id="bubble">
-  <p><a href="http://f0603071.xsph.ru/lab2-6.php">Click for OVN page 2.11!</a></p>
+  <p><a href="http://f0603071.xsph.ru/lab2-6.php">Click for OVN page 2.17!</a></p>
 </div>
 <div id="bubble">
-  <p><a href="http://f0603071.xsph.ru/s3-1  p.php">Click for OVN page 2.11!</a></p>
+  <p><a href="http://f0603071.xsph.ru/s3-1.php">Click for OVN page 3.1!</a></p>
 </div>
 <div id="bubble">
-  <p><a href="http://f0603071.xsph.ru/s3-2p.php">Click for OVN page 2.11!</a></p>
+  <p><a href="http://f0603071.xsph.ru/s3-2.php">Click for OVN page 3.2!</a></p>
 </div>
 <div id="bubble">
-  <p><a href="http://f0603071.xsph.ru/s3-3p.php">Click for OVN page 2.11!</a></p>
+  <p><a href="http://f0603071.xsph.ru/s3-3.php">Click for OVN page 3.5!</a></p>
 </div>
 <div id="bubble">
-  <p><a href="http://f0603071.xsph.ru/s3-4p.php">Click for OVN page 2.11!</a></p>
+  <p><a href="http://f0603071.xsph.ru/s3-4.php">Click for OVN page 3.4!</a></p>
 </div>
 <div id="bubble">
-  <p><a href="http://f0603071.xsph.ru/s3-5p.php">Click for OVN page 2.11!</a></p>
+  <p><a href="http://f0603071.xsph.ru/s3-5.php">Click for OVN page 3.5!</a></p>
 </div>
 <div id="bubble">
-  <p><a href="http://f0603071.xsph.ru/s3-6p.html">Click for OVN page 2.11!</a></p>
+  <p><a href="http://f0603071.xsph.ru/s3-6.html">Click for OVN page 3.6!</a></p>
 </div>
 <p> Дата и время:
 <p>
