@@ -1,12 +1,7 @@
 <?
 require_once('connect.php');
 ?>
-<div id="bubble">
-  <p><a href="http://f0603071.xsph.ru">Click for OVN Homepage!</a></p>
-</div><body bgcolor="#F08080">
-<head>
-	<title>Логинова ПИ-322</title>
-  </head>
+
 <html>
 <head> <title> Сведения о языках </title> </head>
 
@@ -41,19 +36,19 @@ require_once('connect.php');
  <th> ID </th> <th> Название </th> <th> Тип </th> <th> Год разработки </th> <th> Тип выполнения </th> <th> Автор </th>
  <th> Редактирование </th> <th> Удаление </th> </tr>
 <?php
-$res = mysqli_query($connection, "SELECT * FROM `lang`");
-$res = mysqli_fetch_all($res);
-  foreach ($res as $res) {
+$result = mysqli_query($connection, "SELECT * FROM `lang`");
+$result = mysqli_fetch_all($result);
+  foreach ($result as $result) {
                 ?>
                     <tr>
-                        <td><?= $res[0] ?></td>
-                        <td><?= $res[1] ?></td>
-                        <td><?= $res[2] ?></td>
-                        <td><?= $res[3] ?></td>
-                        <td><?= $res[4] ?></td>
-                        <td><?= $res[5] ?></td>
-                        <td><a href="edit.php?id=<?= $res[0] ?>">Изменить</a></td>
-                        <td><a href="delete.php?id=<?= $res[0] ?>">Уничтожить</a></td>
+                        <td><?= $result[0] ?></td>
+                        <td><?= $result[1] ?></td>
+                        <td><?= $result[2] ?></td>
+                        <td><?= $result[3] ?></td>
+                        <td><?= $result[4] ?></td>
+                        <td><?= $result[5] ?></td>
+                        <td><a href="edit.php?id=<?= $result[0] ?>">Изменить</a></td>
+                        <td><a href="delete.php?id=<?= $result[0] ?>">Уничтожить</a></td>
                     </tr>
                 <?php
             }
@@ -69,16 +64,16 @@ print "</table>";
 <tr>
  <th> ID </th> <th> Имя разработчика </th> <th> Город разработки </th>  <th> Редактирование </th> <th> Удаление </th> </tr>
 <?php
-$res = mysqli_query($connection, "SELECT * FROM `razrab`");
-$res = mysqli_fetch_all($res);
-  foreach ($res as $res) {
+$result = mysqli_query($connection, "SELECT * FROM `razrab`");
+$result = mysqli_fetch_all($result);
+  foreach ($result as $result) {
                 ?>
                     <tr>
-                        <td><?= $res[0] ?></td>
-                        <td><?= $res[1] ?></td>
-                        <td><?= $res[2] ?></td>
-                        <td><a href="edit_raz.php?id=<?= $res[0] ?>">Изменить</a></td>
-                        <td><a href="del_raz.php?id=<?= $res[0] ?>">Уничтожить</a></td>
+                        <td><?= $result[0] ?></td>
+                        <td><?= $result[1] ?></td>
+                        <td><?= $result[2] ?></td>
+                        <td><a href="edit_raz.php?id=<?= $result[0] ?>">Изменить</a></td>
+                        <td><a href="del_raz.php?id=<?= $result[0] ?>">Уничтожить</a></td>
                     </tr>
                 <?php
             }
@@ -94,19 +89,19 @@ print "</table>";
  <th> ID </th> <th> ID языка </th> <th> ID разработчика </th><th> Дата разработки </th>
    <th> Версия </th> <th> Название </th>  <th>Редактирование </th> <th> Удаление </th> </tr>
 <?php
-$res = mysqli_query($connection, "SELECT * FROM `application`");
-$res = mysqli_fetch_all($res);
-  foreach ($res as $res) {
+$result = mysqli_query($connection, "SELECT * FROM `application`");
+$result = mysqli_fetch_all($result);
+  foreach ($result as $result) {
                 ?>
                     <tr>
-                        <td><?= $res[0] ?></td>
-                        <td><?= $res[1] ?></td>
-                        <td><?= $res[2] ?></td>
-                        <td><?= $res[3] ?></td>
-                        <td><?= $res[4] ?></td>
-                        <td><?= $res[5] ?></td>
-                        <td><a href="edit_app.php?id=<?= $res[0] ?>">Изменить</a></td>
-                        <td><a href="del_app.php?id=<?= $res[0] ?>">Уничтожить</a></td>
+                        <td><?= $result[0] ?></td>
+                        <td><?= $result[1] ?></td>
+                        <td><?= $result[2] ?></td>
+                        <td><?= $result[3] ?></td>
+                        <td><?= $result[4] ?></td>
+                        <td><?= $result[5] ?></td>
+                        <td><a href="edit_app.php?id=<?= $result[0] ?>">Изменить</a></td>
+                        <td><a href="del_app.php?id=<?= $result[0] ?>">Уничтожить</a></td>
                     </tr>
                 <?php
             }
