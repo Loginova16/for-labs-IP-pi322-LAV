@@ -1,7 +1,9 @@
 <html>
 <head> <title> Сведения о прользователях сайта </title> </head>
+м
 <body>
 <p><a href="http://f0603071.xsph.ru">Click for OVN Homepage!</a></p>
+</div><body bgcolor="#F08080">
 <?php
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
