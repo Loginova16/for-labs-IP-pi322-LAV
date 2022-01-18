@@ -9,11 +9,11 @@ $sheet = $xls->getActiveSheet();
 $sheet->setTitle('Приложения');
 
 $zagolovok =array("ID",
-                "App`s name",  
-                "Version",  
-                "Developer",  
+                "App`s name",
+                "Version",
+                "Developer",
                 "City",
-                "Processing type", 
+                "Processing type",
                 "Type" );
 for($i = 0;$i<count($zagolovok);$i++)
 $sheet->setCellValueByColumnAndRow($i,1,$zagolovok[$i]);
@@ -21,9 +21,9 @@ $sheet->setCellValueByColumnAndRow($i,1,$zagolovok[$i]);
 $result = mysqli_query($connection, "SELECT `application`.`app_id`,
       `application`.`app_name`,`application`.`app_version`,`razrab`.`raz_name`,
       `razrab`.`raz_city`,`lang`.`lang_proc`,`lang`.`lang_type`
-      FROM `application` LEFT JOIN `razrab` 
-      ON `application`.`raz_id`=`razrab`.`raz_id` 
-      LEFT JOIN `lang` 
+      FROM `application` LEFT JOIN `razrab`
+      ON `application`.`raz_id`=`razrab`.`raz_id`
+      LEFT JOIN `lang`
       ON `application`.`lang_id`=`lang`.`lang_id`");
 
 $i=2;
@@ -37,7 +37,7 @@ while($row = mysqli_fetch_array($result))
       $sheet->setCellValueByColumnAndRow(5,$i,$row['lang_proc']);
       $sheet->setCellValueByColumnAndRow(6,$i,$row['lang_type']);
       $i++;
-}  
+}
 
 
 // Выводим HTTP-заголовки

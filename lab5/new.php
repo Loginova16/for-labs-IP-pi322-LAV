@@ -4,7 +4,7 @@
 <body bgcolor="#FFE4E1">
 <H2>Добавление языка:</H2>
 <form action="save_new.php" metod="get">
-Название: <input name="name" size="20" type="text">
+<p>Название: <input name="name" size="20" type="text">
 <p>Тип: <SELECT NAME="type" SIZE="1">
     <OPTION VALUE="compiled" SELECTED> compiled </OPTION>
  <OPTION VALUE="interpretable"> interpretable </OPTION>

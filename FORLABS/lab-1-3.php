@@ -23,5 +23,9 @@ echo ('$num_e1' . ' = ' . $num_e1 . ' - ');
 echo gettype($num_e1) . '<br>';
 $num_e1 = (string) $num_e1;
 echo ('$num_e1' . ' = ' . $num_e1 . ' - ');
+
 echo gettype($num_e1) . '<br>';
+$a = 'ivan';
+$b = 7;
+$str = 'adsd $a, asdasd'
 ?>
