@@ -1,6 +1,6 @@
 <?php header('Content-Type: text/html; charset=windows-1251'); ?>
  <head>
-   <body bgcolor="#FF1493">
+   <body bgcolor="##FFC0CB">
 <body>
 	
 <h1> Loginova A.V. </h1>
