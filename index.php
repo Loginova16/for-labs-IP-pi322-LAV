@@ -1,10 +1,10 @@
 <?php header('Content-Type: text/html; charset=windows-1251'); ?>
  <head>
-   <body bgcolor="#B0E0E6">
+   <body bgcolor="#FF1493">
 <body>
 	
-<h1> Ëîãèíîâà À. Â. </h1>
-<p> Äàòà è âðåìÿ:
+<h1> Loginova A.V. </h1>
+<p> Date and time:
 
 <?php
         date_default_timezone_set("Asia/Yekaterinburg");
@@ -14,9 +14,9 @@
 ?>
 <br><br>
 
-<a href='./pr4/'>Ëàáîðàòîðíàÿ ðàáîòà ыыыasdasdaфывфывфв¹4</a><br>
+<a href='./pr4/'>Lab 4</a><br>
 	
-<a href='./lab5/'>Ëàáîðàòîðíàÿ ðàáîòà ¹5</a><br>
+<a href='./lab5/'>Lab 5</a><br>
 
 </body>
 
