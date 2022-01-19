@@ -1,12 +1,13 @@
 <?php header('Content-Type: text/html; charset=windows-1251'); ?>
 
 <html>
+   <body bgcolor="#FFC0CB">
 <body>
 
 <?php
   session_start();
 
-  $conn = mysqli_connect("sql11.freemysqlhosting.net","sql11466478","vbqFjsYdN9", "sql11466478") or die ("Невозможно подключиться к серверу");
+  $conn = mysqli_connect("sql11.freemysqlhosting.net","sql11466478","vbqFjsYdN9", "sql11466478") or die ("ГЌДєГўГ®Г§Д›Г®Д‡Г­Г® ДЏГ®Г¤Д™Г«ЕЈГ·ДЌЕ€ГјЕ„Л™ Д™ Е„ДєД‘ГўДєД‘Гі");
   mysqli_query($conn, "SET NAMES cp1251");
 
   if($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -17,33 +18,33 @@
       if(!$_SESSION["count"]) $_SESSION["count"] = 0;
     }
     else {
-      echo "<html><head><title>Авторизация</title></head><body>";
-      echo "Неверное имя пользователя или пароль!<br>";
-      echo "<br><a href='.'> Вернуться </a>";
+      echo "<html><head><title>Е”ГўЕ€Г®Д‘ДЌГ§Е•Г¶ДЌЛ™</title></head><body>";
+      echo "ГЌДєГўДєД‘Г­Г®Дє ДЌД›Л™ ДЏГ®Г«ГјГ§Г®ГўЕ•Е€ДєГ«Л™ ДЌГ«ДЌ ДЏЕ•Д‘Г®Г«Гј!<br>";
+      echo "<br><a href='.'> Г‚ДєД‘Г­ГіЕ€ГјЕ„Л™ </a>";
     }
   }
   elseif(!$_SESSION["username"]) { 
-    echo "<html><head><title>Авторизация</title></head><body>";
-    echo "<h1>Логинова А. В.</h1>";
+    echo "<html><head><title>Е”ГўЕ€Г®Д‘ДЌГ§Е•Г¶ДЌЛ™</title></head><body>";
+    echo "<h1>Г‹Г®ДѓДЌГ­Г®ГўЕ• Е”. Г‚.</h1>";
     echo "<form method='post' action='". $PHP_SELF ."'>";
-    echo "<p>Пользователь:</p><input type='text' name='username' size='20'>";
-    echo "<p>Пароль:</p><input type='password' name='password' size='20'><br><br>";
-    echo "<input type='submit' name='submit' value='Войти'></form>";
-    echo "<br><a href='..'>Назад</a><br>";
+    echo "<p>ДЋГ®Г«ГјГ§Г®ГўЕ•Е€ДєГ«Гј:</p><input type='text' name='username' size='20'>";
+    echo "<p>ДЋЕ•Д‘Г®Г«Гј:</p><input type='password' name='password' size='20'><br><br>";
+    echo "<input type='submit' name='submit' value='Г‚Г®Г©Е€ДЌ'></form>";
+    echo "<br><a href='..'>ГЌЕ•Г§Е•Г¤</a><br>";
   }
   
   if($_SESSION["username"]) {
     $query=mysqli_query($conn, "SELECT rule FROM users WHERE username='" . $_SESSION["username"] . "'");
     if($fetch = mysqli_fetch_array($query)) $_SESSION["rule"] = $fetch["rule"];
 
-    echo "<html><head><title>База данных</title></head><body>";
-    echo "<h2>Языки программирования:</h2>";
+    echo "<html><head><title>ГЃЕ•Г§Е• Г¤Е•Г­Г­Е±Е‘</title></head><body>";
+    echo "<h2>ГџГ§Е±Д™ДЌ ДЏД‘Г®ДѓД‘Е•Д›Д›ДЌД‘Г®ГўЕ•Г­ДЌЛ™:</h2>";
     echo "<table border='1'>";
     echo "<tr><th> id </th>";
-    echo "<th> Название </th> <th> Тип </th>";
-    echo "<th> Год разработки </th> <th> Тип выполнения </th> <th> Разработчик </th>";
-    echo "<th> Редактировать </th>";
-    if($_SESSION["rule"] == 2) echo "<th>Уничтожить</th>";
+    echo "<th> ГЌЕ•Г§ГўЕ•Г­ДЌДє </th> <th> Е‡ДЌДЏ </th>";
+    echo "<th> Д‚Г®Г¤ Д‘Е•Г§Д‘Е•ГЎГ®Е€Д™ДЌ </th> <th> Е‡ДЌДЏ ГўЕ±ДЏГ®Г«Г­ДєГ­ДЌЛ™ </th> <th> ДђЕ•Г§Д‘Е•ГЎГ®Е€Г·ДЌД™ </th>";
+    echo "<th> ДђДєГ¤Е•Д™Е€ДЌД‘Г®ГўЕ•Е€Гј </th>";
+    if($_SESSION["rule"] == 2) echo "<th>Г“Г­ДЌГ·Е€Г®Д‡ДЌЕ€Гј</th>";
     echo "</tr>";
     $result=mysqli_query($conn, "SELECT * FROM pl");
     while ($row=mysqli_fetch_array($result)){
@@ -55,22 +56,22 @@
       echo "<td>" . $row["exec"] . "</td>";
       echo "<td>" . $row["dev"] . "</td>";
       echo "<td><a href='edit_pl.php?id=" . $row["id"]
-      . "'>Редактировать</a></td>";
+      . "'>ДђДєГ¤Е•Д™Е€ДЌД‘Г®ГўЕ•Е€Гј</a></td>";
       if($_SESSION["rule"] == 2) echo "<td><a href='delete_pl.php?id=" . $row["id"]
-      . "'>Удалить</a></td>";
+      . "'>Г“Г¤Е•Г«ДЌЕ€Гј</a></td>";
       echo "</tr>";
     }
     echo "</table>";
     $num_rows = mysqli_num_rows($result);
-    echo "<p> Всего записей: $num_rows </p>";
-    echo "<a href='new_pl.php'> Добавить запись </a><br><br>";
+    echo "<p> Г‚Е„ДєДѓГ® Г§Е•ДЏДЌЕ„ДєГ©: $num_rows </p>";
+    echo "<a href='new_pl.php'> Г„Г®ГЎЕ•ГўДЌЕ€Гј Г§Е•ДЏДЌЕ„Гј </a><br><br>";
 
-    echo "<h2>Разработчики:</h2>";
+    echo "<h2>ДђЕ•Г§Д‘Е•ГЎГ®Е€Г·ДЌД™ДЌ:</h2>";
     echo "<table border='1'>";
     echo "<tr><th> id </th>";
-    echo "<th> Название </th> <th> Город </th>";
-    echo "<th> Редактировать </th>";
-    if($_SESSION["rule"] == 2) echo "<th> Уничтожить </th></tr>";
+    echo "<th> ГЌЕ•Г§ГўЕ•Г­ДЌДє </th> <th> Д‚Г®Д‘Г®Г¤ </th>";
+    echo "<th> ДђДєГ¤Е•Д™Е€ДЌД‘Г®ГўЕ•Е€Гј </th>";
+    if($_SESSION["rule"] == 2) echo "<th> Г“Г­ДЌГ·Е€Г®Д‡ДЌЕ€Гј </th></tr>";
     $result=mysqli_query($conn, "SELECT * FROM developer");
     while ($row=mysqli_fetch_array($result)){
       echo "<tr>";
@@ -78,24 +79,24 @@
       echo "<td>" . $row["name"] . "</td>";
       echo "<td>" . $row["city"] . "</td>";
       echo "<td><a href='edit_developer.php?id=" . $row["id"]
-      . "'>Редактировать</a></td>";
+      . "'>ДђДєГ¤Е•Д™Е€ДЌД‘Г®ГўЕ•Е€Гј</a></td>";
       if($_SESSION["rule"] == 2) echo "<td><a href='delete_developer.php?id=" . $row["id"]
-      . "'>Удалить</a></td>";
+      . "'>Г“Г¤Е•Г«ДЌЕ€Гј</a></td>";
       echo "</tr>";
     }
     echo "</table>";
     $num_rows = mysqli_num_rows($result);
-    echo "<p> Всего записей: $num_rows </p>";
-    echo "<a href='new_developer.php'> Добавить запись </a><br><br>";
+    echo "<p> Г‚Е„ДєДѓГ® Г§Е•ДЏДЌЕ„ДєГ©: $num_rows </p>";
+    echo "<a href='new_developer.php'> Г„Г®ГЎЕ•ГўДЌЕ€Гј Г§Е•ДЏДЌЕ„Гј </a><br><br>";
 
-    echo "<h2>Приложения:</h2>";
+    echo "<h2>ДЋД‘ДЌГ«Г®Д‡ДєГ­ДЌЛ™:</h2>";
     echo "<table border='1'>";
     echo "<tr><th> id </th>";
-    echo "<th> id Языка программирования </th> <th> id Разработчика </th>";
-    echo "<th> id Дата создания </th> <th> Текущая версия </th>";
-    echo "<th> Название </th>";
-    echo "<th> Редактировать </th>";
-    if($_SESSION["rule"] == 2) echo "<th> Уничтожить </th> </tr>";
+    echo "<th> id ГџГ§Е±Д™Е• ДЏД‘Г®ДѓД‘Е•Д›Д›ДЌД‘Г®ГўЕ•Г­ДЌЛ™ </th> <th> id ДђЕ•Г§Д‘Е•ГЎГ®Е€Г·ДЌД™Е• </th>";
+    echo "<th> id Г„Е•Е€Е• Е„Г®Г§Г¤Е•Г­ДЌЛ™ </th> <th> Е‡ДєД™ГіЕЇЕ•Л™ ГўДєД‘Е„ДЌЛ™ </th>";
+    echo "<th> ГЌЕ•Г§ГўЕ•Г­ДЌДє </th>";
+    echo "<th> ДђДєГ¤Е•Д™Е€ДЌД‘Г®ГўЕ•Е€Гј </th>";
+    if($_SESSION["rule"] == 2) echo "<th> Г“Г­ДЌГ·Е€Г®Д‡ДЌЕ€Гј </th> </tr>";
     $result=mysqli_query($conn, "SELECT * FROM app");
     while ($row=mysqli_fetch_array($result)){
       echo "<tr>";
@@ -106,44 +107,44 @@
       echo "<td>" . $row["ver"] . "</td>";
       echo "<td>" . $row["name"] . "</td>";
       echo "<td><a href='edit_app.php?id=" . $row["id"]
-      . "'>Редактировать</a></td>";
+      . "'>ДђДєГ¤Е•Д™Е€ДЌД‘Г®ГўЕ•Е€Гј</a></td>";
       if($_SESSION["rule"] == 2) echo "<td><a href='delete_app.php?id=" . $row["id"]
-      . "'>Удалить</a></td>";
+      . "'>Г“Г¤Е•Г«ДЌЕ€Гј</a></td>";
       echo "</tr>";
     }
     echo "</table>";
     $num_rows = mysqli_num_rows($result);
-    echo "<p> Всего записей: $num_rows </p>";
-    echo "<a href='new_app.php'> Добавить запись </a><br><br>";
+    echo "<p> Г‚Е„ДєДѓГ® Г§Е•ДЏДЌЕ„ДєГ©: $num_rows </p>";
+    echo "<a href='new_app.php'> Г„Г®ГЎЕ•ГўДЌЕ€Гј Г§Е•ДЏДЌЕ„Гј </a><br><br>";
 
     if($_SESSION["rule"] == 2) {
-      echo "<h2>Пользователи:</h2>";
+      echo "<h2>ДЋГ®Г«ГјГ§Г®ГўЕ•Е€ДєГ«ДЌ:</h2>";
       echo "<table border='1'>";
-      echo "<tr><th>Имя пользователя</th><th>Пароль</th><th>Права доступа</th>";
-      echo "<th>Редактировать</th><th>Уничтожить</th></tr>";
+      echo "<tr><th>ДЊД›Л™ ДЏГ®Г«ГјГ§Г®ГўЕ•Е€ДєГ«Л™</th><th>ДЋЕ•Д‘Г®Г«Гј</th><th>ДЋД‘Е•ГўЕ• Г¤Г®Е„Е€ГіДЏЕ•</th>";
+      echo "<th>ДђДєГ¤Е•Д™Е€ДЌД‘Г®ГўЕ•Е€Гј</th><th>Г“Г­ДЌГ·Е€Г®Д‡ДЌЕ€Гј</th></tr>";
       $query=mysqli_query($conn, "SELECT * FROM users");
       while($fetch=mysqli_fetch_array($query)) {
         echo "<tr><td>" . $fetch["username"] . "</td>";
         echo "<td>" . $fetch["password"] . "</td>";
         echo "<td>" . $fetch["rule"] . "</td>";
-        echo "<td><a href='edit_users.php?username=" . $fetch["username"] . "'>Редактировать</a></td>";
-        echo "<td><a href='delete_users.php?username=" . $fetch["username"]. "'>Удалить</a></td></tr>";
+        echo "<td><a href='edit_users.php?username=" . $fetch["username"] . "'>ДђДєГ¤Е•Д™Е€ДЌД‘Г®ГўЕ•Е€Гј</a></td>";
+        echo "<td><a href='delete_users.php?username=" . $fetch["username"]. "'>Г“Г¤Е•Г«ДЌЕ€Гј</a></td></tr>";
       } 
       echo "</table>";
    
       $num_rows = mysqli_num_rows($query);
-      echo "<p> Всего записей: $num_rows </p>";
-      echo "<a href='new_users.php'>Добавить запись</a><br><br>";
+      echo "<p> Г‚Е„ДєДѓГ® Г§Е•ДЏДЌЕ„ДєГ©: $num_rows </p>";
+      echo "<a href='new_users.php'>Г„Г®ГЎЕ•ГўДЌЕ€Гј Г§Е•ДЏДЌЕ„Гј</a><br><br>";
     }
 
-    echo "<br><a href='gen_pdf.php'> Сохранить PDF </a><br>";
-    echo "<a href='gen_xls.php'> Сохранить Excel </a><br>";
+    echo "<br><a href='gen_pdf.php'> ЕѓГ®Е‘Д‘Е•Г­ДЌЕ€Гј PDF </a><br>";
+    echo "<a href='gen_xls.php'> ЕѓГ®Е‘Д‘Е•Г­ДЌЕ€Гј Excel </a><br>";
 
     $_SESSION["count"]++;
-    echo "<br>Подключений за сессию: " . $_SESSION["count"];
-    echo "<br><a href='exit.php'>Выход</a><br>";
+    echo "<br>ДЋГ®Г¤Д™Г«ЕЈГ·ДєГ­ДЌГ© Г§Е• Е„ДєЕ„Е„ДЌЕЈ: " . $_SESSION["count"];
+    echo "<br><a href='exit.php'>Г‚Е±Е‘Г®Г¤</a><br>";
 
-    echo "<br><a href='..'>Назад</a><br>";
+    echo "<br><a href='https://php-loginova.herokuapp.com'>ГЌЕ•Г§Е•Г¤</a><br>";
 
     echo "</body></html>";
  }
