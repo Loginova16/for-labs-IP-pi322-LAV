@@ -1,6 +1,8 @@
 <?php header('Content-Type: text/html; charset=windows-1251'); ?>
-
+ <head>
+   <body bgcolor="#B0E0E6">
 <body>
+	
 <h1> Ëîãèíîâà À. Â. </h1>
 <p> Äàòà è âðåìÿ:
 
