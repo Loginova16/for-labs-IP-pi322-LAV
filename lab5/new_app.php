@@ -1,41 +1,37 @@
 <?php header('Content-Type: text/html; charset=windows-1251'); ?>
 
-<?php
-session_start();
-if(!$_SESSION["rule"]) header("Location: .");
-?>
-
 <html>
-<head> <title> Добавление новой записи </title> </head>
+<head> <title> Р”РѕР±Р°РІР»РµРЅРёРµ РЅРѕРІРѕР№ Р·Р°РїРёСЃРё </title> </head>
 <body>
 <?php
- $conn = mysqli_connect("sql11.freemysqlhosting.net","sql11466478","vbqFjsYdN9", "sql11466478") or die ("Невозможно подключиться к серверу");
+ $conn = mysqli_connect("sql11.freemysqlhosting.net","sql11466478","vbqFjsYdN9", "sql11466478") or die ("РќРµРІРѕР·РјРѕР¶РЅРѕ РїРѕРґРєР»СЋС‡РёС‚СЊСЃСЏ Рє СЃРµСЂРІРµСЂСѓ");
  mysqli_query($conn, "SET NAMES cp1251");
 ?>
-<H2>Добавление новой записи:</H2>
+<H2>Р”РѕР±Р°РІР»РµРЅРёРµ РЅРѕРІРѕР№ Р·Р°РїРёСЃРё:</H2>
 <form action="save_new_app.php" metod="get">
-<br>id Языка программирования: <select name="id_pl">
+
 <?php
-  $result=mysqli_query($conn, "SELECT * FROM pl");
-  echo "<option value='' selected disabled hidden>...</option>";
-  foreach($result as $row)
-    echo "<option value='".$row["id"]."'>".$row["id"]."</option>";
-  echo "</select>";
+print "<br>id РЇР·С‹РєР° РїСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёСЏ: <select name='id_pl'>";
+$result=mysqli_query($conn, "SELECT * FROM pl");
+echo "<option value='' selected hidden>...</option>";
+foreach($result as $row) echo "<option value='".$row["id"]."'>".$row["name"]."</option>";
+echo "</select>";
 ?>
-<br>id Разработчика: <select name="id_developer">
+
 <?php
-  $result=mysqli_query($conn, "SELECT * FROM developer");
-  echo "<option value='' selected disabled hidden>...</option>";
-  foreach($result as $row)
-    echo "<option value='".$row["id"]."'>".$row["id"]."</option>";
-  echo "</select>";
+print "<br>id Р Р°Р·СЂР°Р±РѕС‚С‡РёРєР°: <select name='id_developer'>";
+$result=mysqli_query($conn, "SELECT * FROM developer");
+echo "<option value='' selected hidden>...</option>";
+foreach($result as $row) echo "<option value='".$row["id"]."'>".$row["name"]."</option>";
+echo "</select>";
 ?>
-<br>Дата создания: <input name="date" type="date">
-<br>Текущая версия: <input name="ver" size="20" type="text">
-<br>Название: <input name="name" size="20" type="text">
-<p><input name="add" type="submit" value="Добавить">
-<input name="b2" type="reset" value="Очистить"></p>
+
+<br>Р”Р°С‚Р° СЃРѕР·РґР°РЅРёСЏ: <input name="date" type="date">
+<br>РўРµРєСѓС‰Р°СЏ РІРµСЂСЃРёСЏ: <input name="ver" size="20" type="text">
+<br>РќР°Р·РІР°РЅРёРµ: <input name="name" size="20" type="text">
+<p><input name="add" type="submit" value="Р”РѕР±Р°РІРёС‚СЊ">
+<input name="b2" type="reset" value="РћС‡РёСЃС‚РёС‚СЊ"></p>
 </form>
-<p><a href="index.php"> Вернуться </a>
+<p><a href="index.php"> Р’РµСЂРЅСѓС‚СЊСЃСЏ </a>
 </body>
 </html>
